@@ -6,15 +6,29 @@
 		"dev": "whop-proxy --command 'next dev --turbopack'",
 		"build": "next build",
 		"start": "next start",
-		"lint": "next lint"
+		"lint": "next lint",
+		"postinstall": "prisma generate",
+		"prisma:generate": "dotenv -e .env.development -- prisma generate",
+		"prisma:db:push": "dotenv -e .env.development -- prisma db push"
 	},
 	"dependencies": {
+		"@prisma/client": "^5.22.0",
+		"@radix-ui/react-slot": "^1.1.1",
 		"@vercel/functions": "^2.0.3",
 		"@whop/api": "^0.0.24",
 		"@whop/react": "0.2.0",
+		"class-variance-authority": "^0.7.1",
+		"clsx": "^2.1.1",
+		"gsap": "^3.12.8",
+		"lucide-react": "^0.460.0",
 		"next": "15.3.2",
+		"openai": "^4.67.3",
+		"prisma": "^5.22.0",
 		"react": "^19.0.0",
-		"react-dom": "^19.0.0"
+		"react-dom": "^19.0.0",
+		"react-dropzone": "^14.3.5",
+		"sharp": "^0.33.5",
+		"tailwind-merge": "^2.5.4"
 	},
 	"devDependencies": {
 		"@biomejs/biome": "^1.9.4",
